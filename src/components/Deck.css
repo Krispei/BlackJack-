@@ -1,0 +1,8 @@
+#deck {
+    width: clamp(100px, 30vw, 200px);
+    aspect-ratio: 9 / 12;
+    border-radius: clamp(2px, 4vw, 20px);
+    border: clamp(3px, 2vw, 10px) solid white;
+    background-color: rgb(173, 104, 104);
+    box-shadow: 0px clamp(6px, 4vw, 28px) 0px rgb(192, 193, 194);
+}

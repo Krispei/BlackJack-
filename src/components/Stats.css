@@ -1,0 +1,11 @@
+#stats {
+    width: clamp(100px, 30vw, 200px);
+    aspect-ratio: 9 / 12;
+    border-radius: clamp(2px, 4vw, 20px);
+    background-color: rgb(42, 43, 56);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}   

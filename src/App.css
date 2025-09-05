@@ -1,0 +1,144 @@
+#header {
+  /* border: 1px solid red; */
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+#screen {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#stats_box {
+  grid-area: 4 / 1 / 8 / 3;
+  z-index: 1;
+  /* border: 2px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  grid-area: 1 / 1 / 2 / -1;
+  background-color: rgb(42, 43, 56);
+  padding: 5px;
+  padding-left: 20px;
+  font-size: 50px;
+  color: white;
+  font-weight: bold;
+}
+
+#dealer {
+  grid-area: 2 / 1 / 6 / -1;
+  background-color: rgb(80, 82, 108);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#player {
+  grid-area: 6 / 1 / 10/ -1;
+  background-color: rgb(80, 82, 108);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#decksection {
+  grid-area: 4 / -3 / 8 / -1;
+  z-index: 1;
+  display: flex;
+  /* border: 2px solid red; */
+  justify-content: center;
+  align-items: center;
+}
+
+#playerControl {
+  grid-area: -3 / 1 / -1 / -1;
+  background-color: rgb(42, 43, 56);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:20px;
+  gap: 10px
+}
+
+#playerButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+#playerMoneyControl {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#money {
+  background-color: rgb(110, 112, 142);
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+#wager {
+  background-color: rgb(110, 112, 142);
+  color: white;
+  width: 150px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+#wager::placeholder {
+  color: white;
+  opacity: 50%;
+}
+
+#wager:focus {
+  box-shadow: 0px 5px rgba(17, 18, 24, 0.6);
+}
+
+.button {
+  width: 100px;
+  height: 50px;
+  border: 0px;
+  transition: all 0.1s ease-out;
+}
+
+.button--active:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0px 5px 2px rgb(26, 27, 36))
+}
+
+.button--active:active {
+  transform: scale(0.95);
+  transition: transform 0s ease-out;
+  background-color: rgb(97, 99, 126);
+  filter: drop-shadow(0px 0px 2px rgb(26, 27, 36))
+}
+
+.button--inactive {
+  background-color: rgb(87, 89, 116);
+  color: rgb(199, 199, 199);
+}
+
+.button--active {
+  background-color: rgb(110, 112, 142);
+  color: white;
+}
