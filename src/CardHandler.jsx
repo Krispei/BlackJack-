@@ -5,11 +5,12 @@ import { pause } from "./helperFunctions/puase";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import "./cardAnimations.css";
 
-export default function CardHandler({ cards, score, win }) {
+export default function CardHandler({ cards, score, win, DealerOrPlayer }) {
 
   return (
     <div id="containerStyle" className={win ? "winStyle" : ""}>
-      {win && <div id="highlight"></div>}
+
+      {(DealerOrPlayer == "player" && score != null) && <p id="scoreStyle">{score}</p>}
       <div id="cardsStyle">
         <TransitionGroup component={null}>
           {cards.map((oneCard, i) => {
@@ -29,9 +30,11 @@ export default function CardHandler({ cards, score, win }) {
             );
           })}
         </TransitionGroup>
+        {win && <div id="highlight"></div>}
+
       </div>
       
-      {score != null && <p id="scoreStyle">{score}</p>}
+      {(DealerOrPlayer == "dealer" && score != null) && <p id="scoreStyle">{score}</p>}
 
       
       

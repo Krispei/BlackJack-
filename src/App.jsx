@@ -175,24 +175,19 @@ function App() {
       </div>
       <div id='title' className='section'>BlackJack!</div>
       <div id='dealer' className='section'>
-        <CardHandler cards={dealerCards} score={dealerScore} win={winner==2 || winner==3} />
+        <CardHandler cards={dealerCards} score={dealerScore} win={winner==2 || winner==3} DealerOrPlayer={"dealer"}/>
       </div>
       <div id='decksection' className='section'>
         <Deck />
       </div>
       <div id='player' className='section'>
-        
-        <CardHandler cards={playerCards} score={playerScore} win={winner==1 || winner==3}/>
+        <CardHandler cards={playerCards} score={playerScore} win={winner==1 || winner==3} DealerOrPlayer={"player"}/>
       </div>
       <div id='playerControl' className='section'>
         <div id="playerButtons">
           <button id='hit' className={(inGame && playerTurn) ? 'button button--active' : 'button button--inactive'} onClick={hit}>Hit</button>
           <button id='deal' className={!inGame ? 'button button--active' : 'button button--inactive'} onClick={deal}>Deal</button>
           <button id='stand' className={(inGame && playerTurn) ? 'button button--active' : 'button button--inactive'} onClick={stand}>Stand</button>
-        </div>
-        <div id='playerMoneyControl'>
-          <p id='money'></p>
-          <input type="text" id="wager" name="wager" value={""} placeholder="Enter your wager here" />
         </div>
       </div>
     </div>
